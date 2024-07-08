@@ -50,18 +50,8 @@ int main()
         vector<int>gcds(n-1);
         for(int i=1;i<n;i++)
             gcds[i-1] = gcd(v[i],v[i-1]);
-        // for(int ele:gcds)cout<<ele<<" ";
-        // cout<<endl;
-        vector<int> dup = gcds;
-        sort(all(dup));
-        // int j=0,i=0;
-        // for(;i<n;i++){
-        //     if(gcds[i]==dup[j])j++;
-        // }
-        // if(i-j<=2 || i==j)cout<<"YES\n";
-        // else cout<<"NO\n";
         if(checkNonDecreasing(gcds))cout<<"YES\n";
         else cout<<"NO\n";
-    }   
+    }
     return 0;
 }
